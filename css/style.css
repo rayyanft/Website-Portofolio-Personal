@@ -1,0 +1,41 @@
+html {
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.project-card {
+  min-height: 19rem;
+}
+
+.project-title {
+  transition: transform 450ms cubic-bezier(.2, .75, .25, 1), color 450ms ease;
+}
+
+.project-copy {
+  transition: opacity 350ms ease, transform 450ms cubic-bezier(.2, .75, .25, 1);
+}
+
+.project-card:hover .project-title,
+.project-card:focus-visible .project-title {
+  transform: translateY(-.3rem) scale(.72);
+  transform-origin: top center;
+}
+
+.project-card:hover .project-copy,
+.project-card:focus-visible .project-copy {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+  }
+}
